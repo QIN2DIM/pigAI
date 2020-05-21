@@ -31,7 +31,7 @@ class = 班级（需与提交时的选项文本一致，否则会出现不可预
 
 ## 必要声明
 
-##### - 我在测试版本中引用了[BullshitGenerator](https://github.com/menzi11/BullshitGenerator)文章生成脚本，这个脚本非常nice，开箱即用非常有趣~
+### - 我在测试版本中引用了[BullshitGenerator](https://github.com/menzi11/BullshitGenerator)文章生成脚本，这个脚本非常nice，开箱即用非常有趣~
 
 1. 此项目仍处于测试阶段，属于**娱乐项目**，暂未上传与NLP上游应用有关功能模块，使用的方法仍是原始粗暴的随机匹配。
 2. 众所周知批改网的评分系统本就比较智障，即使文章本身狗屁不通，即使全是单句，即使完全跑题，只要句子本身语法没多大问题，分数一般不会太低。
