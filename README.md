@@ -5,14 +5,14 @@
 
 ## pgweb_config.ini **[配置文件]**
 `**默认参数(无特殊需求请勿修改**)`  
-**[url] = 批改网官网 http://www.pigai.org/ 
+[url] = 批改网官网 http://www.pigai.org/ 
 [content] = 作文内容[文本路径]  
-[title] = 作文题目[文本路径]**  
+[title] = 作文题目[文本路径]
 `**自定义参数**`  
-**[user] = 账号,已储备开发者账号  
+[user] = 账号,已储备开发者账号  
 [password] = 密码,已储备开发者账号  
 [paper_code] = 作文号  
-[class] = 班级（需与提交时的选项文本一致，否则会出现不可预估的错误）**
+[class] = 班级（需与提交时的选项文本一致，否则会出现不可预估的错误）
 
 ## 声明
  **在测试版本中,引用了[menzi11]BullshitGenerator文章生成脚本**  
