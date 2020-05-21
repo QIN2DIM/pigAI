@@ -15,8 +15,8 @@
 [class] = 班级（需与提交时的选项文本一致，否则会出现不可预估的错误）**
 
 ## 声明
-在此版本中,引用了'BullshitGenerator'的文章生成脚本  
-github ：https://github.com/menzi11/BullshitGenerator
+ **在此版本中,引用了'BullshitGenerator'的文章生成脚本**  
+- github ：https://github.com/menzi11/BullshitGenerator
 
 1. 此项目仍处于测试阶段，属于娱乐项目，暂未将相应的功能模块替换为NLP上游应用。  
 2. 本人刚入门学习NLP，将运用最新学习成果更新此项目。  
