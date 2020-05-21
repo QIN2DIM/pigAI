@@ -53,7 +53,7 @@ def google_tranlate(source=None, direction=None):
 
     #初始化浏览器
     options = ChromeOptions()
-    # options.add_argument('--headless')
+    options.add_argument('--headless')
     api = Chrome(options=options)
 
     api.get('https://translate.google.cn/#view=home&op=translate&sl=zh-CN&tl=en')
@@ -84,4 +84,3 @@ def google_tranlate(source=None, direction=None):
 
     #over quit
     api.quit()
-
