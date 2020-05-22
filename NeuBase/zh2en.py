@@ -1,4 +1,4 @@
-def caiyun_tranlate(source, direction) :
+def cain_translate(source, direction) :
     import requests
     import json
 
@@ -23,7 +23,20 @@ def caiyun_tranlate(source, direction) :
     return response.text
     # return json.loads(response.text)['target']
 
-def google_tranlate(source=None, direction=None):
+def check_contain_chinese(check_str):
+    """
+    去除中文
+    :param check_str:
+    :return:
+    """
+    import jieba
+    if isinstance(check_str, str):
+        seg = [check for i, check in enumerate(jieba.cut(check_str)) if check != ' ']
+        content_ = ' '.join([sent for sent in seg if not u'\u4e00' <= sent <= u'\u9fff'])
+        print(content_)
+        return  content_
+
+def google_translate(source=None, direction=None):
     """
 
     :param source: str
@@ -68,7 +81,7 @@ def google_tranlate(source=None, direction=None):
         tran_board.send_keys(sent)
 
         #copy
-        time.sleep(1)
+        time.sleep(1.5)
         try:
             tran2en = api.find_element_by_xpath("//span[@class='tlid-translation translation']").text
             tran_text = tran2en + '.'
@@ -77,6 +90,7 @@ def google_tranlate(source=None, direction=None):
             len_ += len(tran_text)
 
             if len_ >= Threshold * 0.7514:
+                content_ = check_contain_chinese(content_)
                 return content_
 
         except (NoSuchElementException, TimeoutException, WebDriverException):
@@ -84,3 +98,6 @@ def google_tranlate(source=None, direction=None):
 
     #over quit
     api.quit()
+
+if __name__ == '__main__':
+    pass

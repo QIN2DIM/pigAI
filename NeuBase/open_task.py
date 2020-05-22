@@ -23,7 +23,7 @@ class BullshitGO(object):
         self.self_cls = config['MAIN']['class']
         self.paper_code = config['MAIN']['paper_code']
         self.cont_PATH = config['MAIN']['contents']
-        with open(self.cont_PATH, 'r')as f :
+        with open(self.cont_PATH, 'r', encoding='utf-8')as f :
             self.paper_contents = f.read()  # 正文
 
         self.api = self.setChromeOptions()
@@ -56,13 +56,15 @@ class BullshitGO(object):
         title_PATH = config['MAIN']['title']
         try:
             paper_title = self.api.find_element_by_xpath("//div[@id='timu']").text
+            print(paper_title)
+            paper_intro = self.api.find_element_by_xpath("//div[@id='request_y']").text
+            paper_title += paper_intro
         except NoSuchElementException :
             paper_title = self.api.find_element_by_xpath("//div[@id='request_y']").text
 
         with open(title_PATH, 'w', encoding='utf-8')as f:
             f.write(paper_title)
             key = paper_title.split(']')[-1].split('】')[-1]
-            print(paper_title)
 
     def get_paper(self,paper):
         with open(self.cont_PATH, 'w', encoding='utf-8')as f:

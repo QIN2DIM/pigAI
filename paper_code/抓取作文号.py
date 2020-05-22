@@ -94,7 +94,7 @@ def bbr():
     global  len_
 
     #构写url，入队
-    code_pool = [random.randint(180493, 1798498) for _ in range(100) ]
+    code_pool = [random.randint(1798298, 1798498) for _ in range(100) ]
     for code in code_pool :
         url = 'http://www.pigai.org/?c=v2&a=write&rid={}'.format(code)
         print(url)
@@ -111,10 +111,6 @@ def bbr():
 
     gevent.joinall(task_list)
 
-def check_contain_chinese(check_str):
-    if isinstance(check_str, str):
-        index = [i for i, check in enumerate(check_str) if u'\u4e00' <= check <= u'\u9fff']
-        return  index
 
 if __name__ == "__main__":
 
